@@ -1,0 +1,6 @@
+framework module Pods_K3FMDemo {
+  umbrella header "Pods-K3FMDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
