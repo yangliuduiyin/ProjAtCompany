@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4B1CFDA801BE1F70FDA477E4 /* Pods_YinRxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51747AAAD99489E72FF1BB8A /* Pods_YinRxSwiftDemo.framework */; };
-		AD01C08721F5E2310099C71D /* KeyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C08621F5E2310099C71D /* KeyNote.swift */; };
+		AD01C08721F5E2310099C71D /* KeyNote_Obvervable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C08621F5E2310099C71D /* KeyNote_Obvervable.swift */; };
+		AD01C08D21F85D070099C71D /* KeyNote_Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C08C21F85D070099C71D /* KeyNote_Observer.swift */; };
+		AD01C08F21F8646B0099C71D /* KeyNote_ObservableAndObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C08E21F8646B0099C71D /* KeyNote_ObservableAndObserver.swift */; };
+		AD01C09121F8818E0099C71D /* KeyNote_Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C09021F8818E0099C71D /* KeyNote_Operator.swift */; };
+		AD01C09321F888010099C71D /* KeyNote_Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01C09221F888010099C71D /* KeyNote_Disposable.swift */; };
 		ADB5CC1321C7985D00C94D4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5CC1221C7985D00C94D4A /* AppDelegate.swift */; };
 		ADB5CC1521C7985D00C94D4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5CC1421C7985D00C94D4A /* ViewController.swift */; };
 		ADB5CC1821C7985D00C94D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB5CC1621C7985D00C94D4A /* Main.storyboard */; };
@@ -47,7 +51,11 @@
 		51747AAAD99489E72FF1BB8A /* Pods_YinRxSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YinRxSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		718CB02201FCF1DBABF6B240 /* Pods_YinRxSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YinRxSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FB144EA0E183B7A2CCD418 /* Pods-YinRxSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YinRxSwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YinRxSwiftDemoUITests/Pods-YinRxSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AD01C08621F5E2310099C71D /* KeyNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote.swift; sourceTree = "<group>"; };
+		AD01C08621F5E2310099C71D /* KeyNote_Obvervable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote_Obvervable.swift; sourceTree = "<group>"; };
+		AD01C08C21F85D070099C71D /* KeyNote_Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote_Observer.swift; sourceTree = "<group>"; };
+		AD01C08E21F8646B0099C71D /* KeyNote_ObservableAndObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote_ObservableAndObserver.swift; sourceTree = "<group>"; };
+		AD01C09021F8818E0099C71D /* KeyNote_Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote_Operator.swift; sourceTree = "<group>"; };
+		AD01C09221F888010099C71D /* KeyNote_Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNote_Disposable.swift; sourceTree = "<group>"; };
 		ADB5CC0F21C7985D00C94D4A /* YinRxSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YinRxSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB5CC1221C7985D00C94D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB5CC1421C7985D00C94D4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +149,11 @@
 			children = (
 				ADB5CC1221C7985D00C94D4A /* AppDelegate.swift */,
 				ADB5CC1421C7985D00C94D4A /* ViewController.swift */,
-				AD01C08621F5E2310099C71D /* KeyNote.swift */,
+				AD01C08621F5E2310099C71D /* KeyNote_Obvervable.swift */,
+				AD01C08C21F85D070099C71D /* KeyNote_Observer.swift */,
+				AD01C08E21F8646B0099C71D /* KeyNote_ObservableAndObserver.swift */,
+				AD01C09021F8818E0099C71D /* KeyNote_Operator.swift */,
+				AD01C09221F888010099C71D /* KeyNote_Disposable.swift */,
 				ADB5CC1621C7985D00C94D4A /* Main.storyboard */,
 				ADB5CC1921C7985E00C94D4A /* Assets.xcassets */,
 				ADB5CC1B21C7985E00C94D4A /* LaunchScreen.storyboard */,
@@ -399,8 +411,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB5CC1521C7985D00C94D4A /* ViewController.swift in Sources */,
-				AD01C08721F5E2310099C71D /* KeyNote.swift in Sources */,
+				AD01C09121F8818E0099C71D /* KeyNote_Operator.swift in Sources */,
+				AD01C08F21F8646B0099C71D /* KeyNote_ObservableAndObserver.swift in Sources */,
+				AD01C08721F5E2310099C71D /* KeyNote_Obvervable.swift in Sources */,
 				ADB5CC1321C7985D00C94D4A /* AppDelegate.swift in Sources */,
+				AD01C09321F888010099C71D /* KeyNote_Disposable.swift in Sources */,
+				AD01C08D21F85D070099C71D /* KeyNote_Observer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

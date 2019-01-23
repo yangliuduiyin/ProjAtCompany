@@ -67,12 +67,53 @@ class ViewController: UIViewController {
     }
     
     private func doSomething() {
-        
+        // 1. Single的使用
+        usingSingle()
     }
 
     
     
 }
+
+// MARK: - Single的使用
+extension ViewController {
+    func usingSingle() {
+        FunctionalReactiveProgramming.getRepo("Reactive/RxSwift")
+            .subscribe(onSuccess: { (json) in
+                print("JSON: \(json)")
+            }) { (error) in
+                print("Error: \(error.localizedDescription)")
+        }
+        .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Completable的使用
+extension ViewController {
+    func usingCompletable() {
+        FunctionalReactiveProgramming.cacheLocally()
+            .subscribe(onCompleted: {
+                print("Completed with no error")
+            }) { (error) in
+                print("Completed with an error: \(error.localizedDescription)")
+        }.disposed(by: disposeBag)
+    }
+}
+
+// MARk: - Maybe的使用
+extension ViewController {
+    func usingMaybe() {
+        FunctionalReactiveProgramming.gengerateStringByMaybe()
+            .subscribe(onSuccess: { (str) in
+                print("STR: \(str)")
+            }, onError: { (error) in
+               print("Maybe with an error: \(error.localizedDescription)")
+            }) {
+                 print("Maybe with no error")
+        }.disposed(by: disposeBag)
+    }
+}
+
 
 extension String {
     static let userNameValidTip = "用户名不得少于6个字符"
