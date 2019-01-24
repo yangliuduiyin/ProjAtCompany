@@ -68,7 +68,10 @@ class ViewController: UIViewController {
     
     private func doSomething() {
         // 1. Single的使用
-        usingSingle()
+        //usingSingle()
+        
+        // 2.concat操作符的使用:
+        // concatDemo() Error!!!
     }
 
     
@@ -111,6 +114,35 @@ extension ViewController {
             }) {
                  print("Maybe with no error")
         }.disposed(by: disposeBag)
+    }
+}
+
+extension ViewController {
+    func concatDemo() {
+        let disposeBag = DisposeBag()
+        let subject1 = BehaviorSubject(value: "🍎")
+        let subject2 = BehaviorSubject(value: "🐶")
+        
+        let variable = Variable(subject1)
+        
+        variable.asObservable()
+        .concat()
+            .subscribe {
+                print("$0")
+        }.disposed(by: disposeBag)
+        
+        subject1.onNext("🍐")
+        subject1.onNext("🍊")
+        
+        variable.value = subject2
+        
+        subject2.onNext("I would be ignored")
+        subject2.onNext("🐱")
+        
+        subject1.onCompleted()
+        
+        subject2.onNext("🐭")
+        
     }
 }
 
